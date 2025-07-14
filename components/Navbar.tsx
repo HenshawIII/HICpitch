@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { auth ,signIn,signOut} from '@/auth'
-import logo from '@/public/log1.png'
+import logo from '@/public/logr.png'
 
 const Navbar = async () => {
   const session = await auth()

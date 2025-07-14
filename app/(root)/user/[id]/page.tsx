@@ -33,6 +33,7 @@ export default async function UserPage({params}:{params:Promise<{id:string}>}){
                 </div>
                 <Image src={user.image} alt={user.name} width={220} height={220} className='profile_image' />
                 <p className='text-30-extrabold mt-7 text-center'>@{user.username}</p>
+                <p className='text-14-normal mt-1 text-center'>{user.email}</p>
                 <p className='text-14-normal mt-1 text-center'>{user.bio}</p>
             </div>
             <div className="flex-1 flex flex-col gap-4 lg:mt-5">
