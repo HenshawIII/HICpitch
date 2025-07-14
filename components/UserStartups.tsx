@@ -16,7 +16,7 @@ export default async function UserStartups({user}:{user:any}){
     image,  
 }`
     ,{id:user._id})
-    console.log("startups",startups)
+    // console.log("startups",startups)
     return(
         <>
             {

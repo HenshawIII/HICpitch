@@ -23,7 +23,7 @@ export default async function UserPage({params}:{params:Promise<{id:string}>}){
     if(!user){
         return notFound()
     }
-    console.log("user",user)
+    // console.log("user",user)
     return(
         <>
         <section className="profile_container">

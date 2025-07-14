@@ -30,10 +30,10 @@ const handleSubmit = async (prevState:any,formData:FormData)=>{
         }
         await formSchema.parseAsync(formValues)
 
-        console.log(formValues)
+        // console.log(formValues)
         
         const result = await createStartup(prevState,formData,pitch)
-        console.log(result)
+        // console.log(result)
         if(result.status === "SUCCESS"){
             toast({
                 title:"Startup created successfully",
@@ -80,25 +80,25 @@ const [state,formAction,isPending] = useActionState(handleSubmit,{error:"",statu
           <form action={formAction} className='startup-form'>
             <div>
                 <label htmlFor="title" className="startup-form_label">Title</label>
-                <Input name="title" id="title" type="text" placeholder='Enter your startup title' className='startup-form_input' required placeholder='Enter your startup title' />
+                <Input name="title" id="title" type="text"  className='startup-form_input' required placeholder='Enter your startup title' />
                 {errors.title && <p className='startup-form_error'>{errors.title[0]}</p>}
             </div>
 
             <div>
                 <label htmlFor="description" className="startup-form_label">Description</label>
-                <Textarea name="description" id="description" type="text" placeholder='Enter your startup description' className='startup-form_textarea' required placeholder='Enter your startup description' />
+                <Textarea name="description" id="description"   className='startup-form_textarea' required placeholder='Enter your startup description' />
                 {errors.description && <p className='startup-form_error'>{errors.description[0]}</p>}
             </div>
 
             <div>
                 <label htmlFor="category" className="startup-form_label">Category</label>
-                <Input name="category" id="category" type="text" placeholder='Startup category' className='startup-form_input' required placeholder='Enter your startup category' />
+                <Input name="category" id="category" type="text" className='startup-form_input' required placeholder='Enter your startup category' />
                 {errors.category && <p className='startup-form_error'>{errors.category[0]}</p>}
             </div>
 
             <div>
                 <label htmlFor="link" className="startup-form_label">Link</label>
-                <Input name="link" id="link" type="text" placeholder='Enter your startup link' className='startup-form_input' required placeholder='Enter your Image URL' />
+                <Input name="link" id="link" type="text"  className='startup-form_input' required placeholder='Enter your Image URL' />
                 {errors.link && <p className='startup-form_error'>{errors.link[0]}</p>}
             </div>
 

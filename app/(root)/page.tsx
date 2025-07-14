@@ -18,7 +18,7 @@ export default async function Home({searchParams}:{searchParams:Promise<{query?:
   // console.log(posts)
 
   const session = await auth()
-  console.log(session)
+  // console.log(session)
 
 // const posts = [ 
 //   {

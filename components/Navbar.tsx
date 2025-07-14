@@ -31,7 +31,7 @@ const Navbar = async () => {
 
               <Link href={`user/${session.user.id}`}>
                 {/* <span>{session?.user?.name}</span> */}
-                <Image src={session?.user?.image} alt={session?.user?.name} width={32} height={32} className='rounded-full' />
+                <Image src={session?.user?.image || ""} alt={session?.user?.name || ""} width={32} height={32} className='rounded-full' />
               </Link>
 
             </>
