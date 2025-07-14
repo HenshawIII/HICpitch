@@ -68,8 +68,8 @@ const worksans = localFont({
 })
 
 export const metadata: Metadata = {
-  title: "YC Directory",
-  description: "Pitch,Vote and Grow your startup",
+  title: "MYStartup",
+  description: "Pitch,Connect and Grow your Network",
 };
 
 export default function RootLayout({
