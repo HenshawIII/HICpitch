@@ -5,15 +5,16 @@ import StartupCard from "@/components/StartupCard";
 // import { StartupCardType } from "@/components/StartupCard";
 import {getStartups} from "@/sanity/lib/queries"
 import {client} from "@/sanity/lib/client"
-import {SanityLive,sanityFetch} from "@/sanity/lib/live"
+// import {SanityLive,sanityFetch} from "@/sanity/lib/live"
 import { auth } from "@/auth";
 
 export default async function Home({searchParams}:{searchParams:Promise<{query?:string}>}) {
  const query :any= (await searchParams).query
 
-  // const posts = await client.fetch(getStartups)
+ 
   const params = {search:query || null}
-  const {data:posts} = await sanityFetch({query:getStartups,params})
+  const posts = await client.fetch(getStartups,params)
+  // const {data:posts} = await sanityFetch({query:getStartups,params})
 
   // console.log(posts)
 
@@ -101,7 +102,7 @@ export default async function Home({searchParams}:{searchParams:Promise<{query?:
     </ul>
 
     </section>
-    <SanityLive/>
+    {/* <SanityLive/> */}
     </>
   );
 }

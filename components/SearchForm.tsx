@@ -9,7 +9,7 @@ const SearchForm = ({query}:{query?:"string"}) => {
   return (
     <>
     <Form action={'/'} className={'search-form'} scroll={false}>
-    <input name={"query"} type="text" defaultValue={""} placeholder='Search Startups by name,category or title' className='search-input' />
+    <input name={"query"} type="text" defaultValue={""} placeholder='Search Startups by author name,ccategory or title' className='search-input' />
 
     <div className='flex gap-2'>
         {
